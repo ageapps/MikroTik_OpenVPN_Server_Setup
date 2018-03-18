@@ -41,6 +41,7 @@ Enter pass phrase for certificates/cert_export_user1@CA.key:
 writing RSA key
 ...
 ```
+Go to `create_config.sh` and add the following variables `PUBLIC_IP` (your router's public ip address) and `PUBLIC_PORT` (OpenVPN's server exposed port).
 
 Generate `.ovpn` config files with following script:
 
