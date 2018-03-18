@@ -56,3 +56,10 @@ Creating config file...
 ```
 
 Now in `/configs` folder you will find one folder with each user and their config files needed to configure the client
+
+
+## Resources
++ [OpenVPN Server and certificate management on MikroTik](https://gist.github.com/SmartFinn/8324a55a2020c56b267b)
++ [OpenVPN Mikrotik Wiki](https://wiki.mikrotik.com/wiki/OpenVPN)
++ [MikroTik OpenVPN server and Windows OpenVPN client (LAB demo)](https://www.youtube.com/watch?v=ucifDsLHj6c)
+
