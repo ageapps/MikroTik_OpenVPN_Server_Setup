@@ -4,7 +4,11 @@ MikroTik (Router OS) OpenVPN Server Setup
 
 ## Server Setup in Mikrotik Router
 
-Upload both files `ovpn_server.rsc` and `ovpn_clients.rsc`. To import any `.rsc` file open a terminal and write `import file=XXXXX` where XXXXX is the name of the file to import.
+Upload both files `ovpn_server.rsc` and `ovpn_clients.rsc`. To import any `.rsc` file open a terminal and write
+````
+import file=XXXXX
+```` 
+where XXXXX is the name of the file to import.
 
 First import `ovpn_server.rsc` that will make the following actions:
 
@@ -14,7 +18,7 @@ First import `ovpn_server.rsc` that will make the following actions:
 + Setup RouterOS's OpenVPN native server
 + Add a firewall route in order to accept traffic to the OpenVPN server
 
-First import `ovpn_clients.rsc` that will make the following actions for each user:
+Then import `ovpn_clients.rsc` that will make the following actions for each user:
 
 + Create user secret  
 + Generate and sign user's certificate
@@ -41,7 +45,7 @@ Enter pass phrase for certificates/cert_export_user1@CA.key:
 writing RSA key
 ...
 ```
-Go to `create_config.sh` and add the following variables `PUBLIC_IP` (your router's public ip address) and `PUBLIC_PORT` (OpenVPN's server exposed port).
+Go to `create_config.sh` and add the following variables `PUBLIC_ADDRESS` (your router's public ip address) and `PUBLIC_PORT` (OpenVPN's server exposed port).
 
 Generate `.ovpn` config files with following script:
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PUBLIC_IP="" #YOUR PUBLIC ADDRESS
-PUBLIC_PORT="" #YOUR PUBLIC PORT
+PUBLIC_ADDRESS="pihostadri.ddns.net" #YOUR PUBLIC IP OR ADDRESS
+PUBLIC_PORT="1194" #YOUR PUBLIC PORT
 PROTOCOL="tcp-client" #YOUR PROTOCOL udp/tcp-client
 
 mkdir configs
@@ -17,5 +17,5 @@ for i in `seq 1 5`;
                 echo "user$i\nuser000$i" > configs/user$i/user.auth
                 
                 echo "Creating config file..."
-                sed "s/{CLIENT}/user$i@CA/g; s/{PUBLIC_IP}/$PUBLIC_IP/g; s/{PUBLIC_PORT}/$PUBLIC_PORT/g; s/{PROTOCOL}/$PROTOCOL/g" template.ovpn > configs/user$i/user$i.ovpn
+                sed "s/{CLIENT}/user$i@CA/g; s/{PUBLIC_ADDRESS}/$PUBLIC_ADDRESS/g; s/{PUBLIC_PORT}/$PUBLIC_PORT/g; s/{PROTOCOL}/$PROTOCOL/g" template.ovpn > configs/user$i/user$i.ovpn
         done  
